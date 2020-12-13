@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="root" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="mvc_structure.Controller.HomeViewController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+
+    <top>
+        <HBox id="top" BorderPane.alignment="CENTER">
+            <Label id="header" text="📚 Bookshop" />
+        </HBox>
+    </top>
+
+    <center>
+        <HBox fx:id="view" maxHeight="830.0" minHeight="830.0" prefHeight="830.0">
+            <VBox id="left" prefWidth="150" BorderPane.alignment="CENTER">
+                <Label id="leftText" text="Enter as:" />
+                <Button id="customerBtn" onAction="#viewAsCustomer" text="Customer" />
+                <Button id="bookkeeperBtn" onAction="#viewAsBookkeeper" text="Bookkeeper" />
+                <Button id="exitBtn" onAction="#exit" text="Exit" />
+            </VBox>
+
+            <GridPane BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+                <Label id="mainTitle" text="📖 Welcome!" GridPane.rowIndex="0" />
+                <Label id="mainContent" text="Welcome to the Bookshop. Please enter either as a customer, or a bookkeeper." GridPane.rowIndex="1" />
+            </GridPane>
+        </HBox>
+    </center>
+
+</BorderPane>
